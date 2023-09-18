@@ -95,3 +95,28 @@ Se sim, adicionar os pacotes
 ```
 git add .
 ```
+verificar se os arquivos anteriores ficam verdes
+```
+git status
+```
+Salvar os arquivos
+```
+git commit -m "quinta-Api"
+```
+* Abrir github
+* copiar url do repositorio
+
+trocar branch do arquivo
+```
+git branch -M main
+```
+```
+git remote  addd origin (colar url do repositorio)
+```
+```
+git push -u origin main
+```
+ver para qual api foi enviada
+```
+git config -l
+```
