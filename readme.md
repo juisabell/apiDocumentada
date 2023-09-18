@@ -50,3 +50,48 @@ Adicionar arquivos e pastas no gitignore
 node_modules
 .env
 ```
+Adicionar uma porta no arquivo .Env (OBS: QUALQUER NÚMERO A PARTIR DE 1000 )
+```
+PORT = 3004
+```
+Configuranção básica da API com express no server.js
+```
+// IMPORTAR O PACOTE EXPRESS
+const express = require('express');
+
+// INSTANCIAR O EXPRESS NA VARIAVÉL APP
+const app = express();
+
+// Recuperar o pacote dotenv
+const dotenv = require("dotenv").config();
+
+// Importando variavél do arquivo .env
+const PORT = process.env.PORT;
+
+//testando o servidor
+app.listen(PORT,() => console.log(`Running at port ${PORT}!`))
+
+```
+Alterar package.json > excluir teste do script > adicionar comando para rodar o servidor
+```
+ "start":"nodemon src/server.js"
+```
+Rodar o servidor no gitbash
+```
+npm start
+```
+
+## Enviar para git hub
+
+Verificar se tem arquivo git 
+```
+ls -a
+```
+Verificar se os arquivos ficam vermelhos 
+```
+git status
+```
+Se sim, adicionar os pacotes 
+```
+git add .
+```
